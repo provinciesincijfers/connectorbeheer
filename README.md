@@ -9,4 +9,4 @@ Om zeker te zijn dat data van de klant niet overschreven wordt, worden alle inte
 
 ## Updates
 
-Op dit moment zijn de updates op afroep. Er wordt telkens een communicatie gevoerd over inhoudelijke aanpassingen, en pas dan wordt data en metadata overschreven.
+De updates lopen continue op basis van de gepubliceerde databank van provincies.incijfers.be. Bestaande data en metadata wordt voortuderend bijgewerkt. Er wordt wel telkens een communicatie gevoerd over inhoudelijke aanpassingen, pas daarna wordt de data en metadata overgezet.
