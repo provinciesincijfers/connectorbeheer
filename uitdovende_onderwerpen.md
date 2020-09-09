@@ -2,7 +2,7 @@
 
 ## Theoretisch
 
-* opgelet: zowel "uidovend" als "uitgedoofd"
+* opgelet: zowel "uitdovend" als "uitgedoofd"
 
 ## Praktisch
 
@@ -20,6 +20,9 @@ Zoals optie 1 hierboven, maar exporteer de map die je gebruikt om je Dashboard t
 
 Ga naar Studio>Data>Consistency checks en maak het rapport “Indicators used in reports”. Filter in de “varname” op “uitdovend”. Opgelet: je krijgt hier een overzicht van alle indicatoren die je rapport nodig heeft, zelfs als deze als aggregatieonderwerp, drempelonderwerp of in een formule gebruikt worden.
 
-4)  Uitdovende onderwerpen in formules
+4)  Uitdovende onderwerpen die door andere onderwerpen gebruikt worden
+- zorg dat er geen formules gebruik maken van deze onderwerpen (zoek in veld Formula)
+- de onderwerpen kunnen eventueel ook als AggregateVar en TresholdVar gebruikt zijn; maar da's eerder zeldzaam dat dit in je eigen aangemaakte onderwerpen 
+
 
 
