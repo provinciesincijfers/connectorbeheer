@@ -10,7 +10,7 @@ Om zeker te zijn dat eigen data van de klant niet overschreven wordt, worden all
 
 Je kan binnen een klant-versie dus eenvoudig zoeken op deze code om lijsten te trekken van wat je via de Connector krijgt. Je kan ook filteren op "Beschermd", aangezien al onze dat beveiligd worden tegen mogelijk privacy-gevoelige bewerkingen.
 
-Data kan door de Connector niet automatisch gewist worden. Dat zou ook geen goed idee zijn. Zie de uitleg over het [laten uitdoven van data](https://github.com/provinciesincijfers/connectorbeheer/blob/master/uitdovende_onderwerpen.md) voor praktische 
+Data kan door de Connector niet automatisch gewist worden. Dat zou ook geen goed idee zijn. Zie de uitleg over het [laten uitdoven van data](https://github.com/provinciesincijfers/connectorbeheer/blob/master/uitdovende_onderwerpen.md) voor meer uitleg en praktische tips.
 
 ## Updates
 
