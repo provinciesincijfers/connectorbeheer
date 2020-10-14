@@ -4,7 +4,7 @@ Gebruik de Issues hier indien je problemen hebt met data die je ontvangt via de 
 
 ## Basisprincipes
 
-Via de Swing Connector kan je een pakket data ontvangen vanuit provincies.incijfers.be. Dit omvat alle instellingen en metadata van het onderwerp, inclusief privacy-maatregelen. Het pakket data waar het om gaat kan je raadplegen in de Excel die je in deze map vindt, of na inloggen op provincies.incijfers.be/databank in de map INTERN/Swing Connectoren/Uitgaande connectoren/Centrumsteden. Een kopie van deze mappenstructuur wordt ook overgezet naar de Swing van de klant.
+Via de Swing Connector kan je een pakket data ontvangen vanuit provincies.incijfers.be. Dit omvat alle instellingen en metadata van het onderwerp, inclusief privacy-maatregelen. Het pakket data waar het om gaat kan je raadplegen in [de Excel die je in *provinciesincijfers/connectorbeheer* vindt](https://github.com/provinciesincijfers/connectorbeheer/blob/master/00_swing_connector_overzicht.xlsx) , of na inloggen op provincies.incijfers.be/databank in de map INTERN/Swing Connectoren/Uitgaande connectoren/Centrumsteden. Een kopie van deze mappenstructuur wordt ook overgezet naar de Swing van de klant.
 
 Om zeker te zijn dat eigen data van de klant niet overschreven wordt, worden alle interne codes voorafgegaan door "dna_". 
 
