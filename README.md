@@ -14,7 +14,7 @@ Je kan binnen een klant-versie dus eenvoudig zoeken op deze code om lijsten te t
 
 Data kan door de Connector niet automatisch gewist worden. Dat zou ook geen goed idee zijn. Zie de uitleg over het [laten uitdoven van data](https://github.com/provinciesincijfers/JiveDocumentation/blob/master/01.%20Algemeen%20databeheer/Levensloop%20onderwerpen.md) voor meer uitleg en praktische tips.
 
-Meer technische details over het opzet en de privacy-maatregelen [vind je hier](https://share.vlaamsbrabant.be/share/s/jb0ZsN95Ry-8FVSRA3DMnw).
+Meer technische details over het opzet en de privacy-maatregelen [vind je hier](https://teams.microsoft.com/l/file/22F2D090-619A-4E49-88CC-8482149A8004?tenantId=abeeed50-ea7b-4008-b0e5-d27f624bf85e&fileType=pdf&objectUrl=https%3A%2F%2Fvlbr.sharepoint.com%2Fteams%2FDA-Interprovincialewerking%2FGedeelde%20documenten%2FGeneral%2FABF%2Fafspraken%20en%20verslagen%2F20181109%20-%20swing%20connector%20en%20webservices.pdf&baseUrl=https%3A%2F%2Fvlbr.sharepoint.com%2Fteams%2FDA-Interprovincialewerking&serviceName=teams&threadId=19:c4098e9ac4e540f99d6f626ed467eaa0@thread.tacv2&groupId=affb505a-9c02-40a9-a491-9b2e3ac774a6).
 
 ## Updates
 
