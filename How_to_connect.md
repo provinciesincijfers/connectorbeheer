@@ -1,5 +1,7 @@
 # Connectorbeheer: How to connect
 
+## Stappenplan 
+
 **Stap 0**: Zet een notitieblokje klaar waar je noemenswaardige zaken oplijst voor het info-tabblad van het Connectordocument, of om op de OBMI te vermelden.
 
 **Stap 1**: Kijk in het [logboek](https://provincies.incijfers.be/admin/jive/Report/Edit/logboek) op PinC Dit geeft een indicatie van nieuwe datareeksen, actualisaties en wijzigingen sinds de laatste update.
@@ -37,10 +39,12 @@ Er zijn drie scenario's:
 (3) Als een thema werd geherorganiseerd, kan je alles uit de connector deleten en de nieuwe structuur overzetten. Dit is echter niet zonder gevaar! Zo kan je bv. dakloze onderwerpen krijgen. Uitdovende onderwerpen staan op deze manier niet meer in de connector, zodat het voor de centrumsteden niet duidelijk is welke onderwerpen uitdovend zijn en dus verwijderd moeten worden. Hierdoor is de beste oplossing om de oude indicatoren erin te laten staan, en dan de nieuwe in een nieuw mapje te steken zodat het voor hen duidelijk is.
 
 :grey_exclamation: Vergeet niet waar nodig de relevante indicatoren in de map 'Beschikbaar op statsec' te plaatsen. Dit heeft technisch gezien geen enkel effect, maar is voor het gemak van de gebruiker.
+
 :grey_exclamation: Zwier niet zomaar iets uit de connector, ALTIJD op uitdovend zetten.
+
 :grey_exclamation: De connector map moet je updaten en publiceren vòòr het weekend voor de eerste OBMI.
 
-**Stap 7**: Vul de excel aan [00_swing_connector_overzicht](https://github.com/provinciesincijfers/connectorbeheer/blob/master/00_swing_connector_overzicht.xlsx)(00\_swing\_connector\_overzicht). De instructies staan in deze excel. Dit is het communicatie instrument naar de centrumsteden over wat er in de nieuwe release zit.
+**Stap 7**: Vul de excel aan [00_swing_connector_overzicht](https://github.com/provinciesincijfers/connectorbeheer/blob/master/00_swing_connector_overzicht.xlsx). De instructies staan in deze excel. Dit is het communicatie instrument naar de centrumsteden over wat er in de nieuwe release zit.
 
 Belangrijk:
 
@@ -57,6 +61,6 @@ Belangrijk:
 
 Zorg ervoor dat je **ten laatste de vrijdag voor de OBMI publiceert**. 
 
-**Overige belangrijke zaken**
+## Overige belangrijke zaken
 
 Check zeker ook Interne omgeving > swing connectoren > uitgaande > centrumsteden > geplande uitbreiding. Belangrijke veranderingen worden in deze map geplaatst. Dus als er bv iets aankomt, maar nog niet rijp is om gepubliceerd te worden, kunnen de centrumsteden dit al eens verkennen zonder dat het impact heeft op hun eigen omgeving. Zij kunnen dit enkel zien wanneer ze inloggen.
