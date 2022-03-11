@@ -1,5 +1,7 @@
 # Connectorbeheer: How to connect
 
+De databeheerders van provincies.incijfers.be gebruiken volgend stappenplan om de Connector voor de Centrumsteden periodiek aan te vullen.
+
 ## Stappenplan 
 
 **Stap 0**: Zet een notitieblokje klaar waar je noemenswaardige zaken oplijst voor het info-tabblad van het Connectordocument, of om op de OBMI te vermelden.
