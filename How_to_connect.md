@@ -54,7 +54,7 @@ Er zijn drie scenario's:
 Belangrijk:
 
 - In de tab **'voorbereiding'** plak je alles in de witte ruimte, waarbij je ervoor zorgt dat je niet per ongeluk in de grijze ruimte komt. Zorg dus voor genoeg plaats.
-- Kopieer het lichtgrijze naar een nieuwe tab met de nieuwe releasedatum. Zo heb je het overzicht van de hele connector op dat moment.
+- Kopieer het lichtgrijze naar een nieuwe tab met de nieuwe releasedatum. Zo heb je het overzicht van de hele connector op dat moment. Verwijder alle niet-indicatoren. Je ziet deze terugkomen in de draaitabel (zie verder), maar deze mogen dus niet in de draaitabel terechtkomen. 
 - In de tab **'verzamel'** staat elke versie van elke connector onder elkaar, inclusief datum. Copy paste dus de tab van de nieuwe release, plak deze onderdaan en vul de datum aan.
 - In de tab **'draaitabel'** (obv 'verzamel') kan je dan het aantal nieuwe onderwerpen zien en een leuke figuur. Voeg hiervoor nog de som toe van het aantal nieuwe onderwerpen. (dit laatste na volgende stap)
 - Filter in de draaitabel vervolgens op de laatste en voorlaatste release, en kopieer vervolgens bij 'nieuwe onderwerpen' de nieuwe onderwerpen.
