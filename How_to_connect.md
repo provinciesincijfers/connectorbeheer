@@ -27,7 +27,7 @@ Belangrijk hierbij:
 - Het kan zijn dat sommige indicatoren er 2x instaan, bv deze van levensverwachting.
 - Cnt_xy_laadpalen moet niet in de connector.
 - Sommige kubussen van Vicky mogen er niet in (kubus1403_ap en kubus1204_eff). Aangepaste kubussen voor de centrumsteden zitten al in de connector. Ook vp1403_tech_mhti_kis, v1205_tech_mhti_kis en v1205_tech_mhti_hoofd staan enkel in de connector.
-- De reeks 9101 (mobiliteit/enquete): want de Centrumsteden doen zélf de Stads- en Gemeentemonitor
+- De reeks 91xx: want de Centrumsteden doen zélf de Stads- en Gemeentemonitor
 
 Idealiter zie je hier het logboek in weerspiegeld, toch wat betreft NIEUWE thema's.
 
