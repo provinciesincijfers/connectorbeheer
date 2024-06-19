@@ -6,7 +6,7 @@ De databeheerders van provincies.incijfers.be gebruiken volgend stappenplan om d
 
 **Stap 0**: Zet een notitieblokje klaar waar je noemenswaardige zaken oplijst voor het info-tabblad van het Connectordocument, of om op de OBMI te vermelden.
 
-**Stap 1**: Kijk in het [logboek](https://provincies.incijfers.be/admin/jive/Report/Edit/logboek) op PinC Dit geeft een indicatie van nieuwe datareeksen, actualisaties en wijzigingen sinds de laatste update.
+**Stap 1**: Kijk in het [logboek](https://provincies.incijfers.be/admin/jive/Report/Edit/logboek) op PinC Dit geeft een indicatie van nieuwe datareeksen, actualisaties en wijzigingen sinds de laatste update. Vanaf 1/6/24 staat het logboek op [Teams](https://vlbr.sharepoint.com/:x:/r/teams/DA-Interprovincialewerking/Gedeelde%20documenten/General/2024%20LOGBOEK%20vanaf%20juni%202024.xlsx?d=w5635d830d5fe4aacbf95c83d7e401f66&csf=1&web=1&e=SihwfP).
 
 :grey_exclamation: Opgelet: Het kan zijn dat het logboek niet volledig is. Ook niet alles is relevant voor gebruikers van de connector, enkel zaken die extern staan.
 
