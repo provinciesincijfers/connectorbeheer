@@ -66,7 +66,7 @@ Belangrijk:
 **Stap 8**: 
 - Push de excel naar github
 - stuur Joris een mail met een korte beschrijving van de update. Dit is niet enkel de nieuwe / geactualiseerde data, maar bv ook een nieuw rapport of andere nieuwigheden. Dit kan ook voor de publicatie van de databank.
-- Laat aan Richard weten dat de Connector-themaboom is bijgewerkt (+vgc!). Voorlopig wordt de themaboom niet meer automatisch gesynchroniseerd bij de wekelijkse update wegens een hardnekkige bug. Aangezien de inhoud van de themaboom niet vaak verandert, moeten we nu dus Richard op de hoogte brengen wanneer we de themaboom wijzigen.
+- Laat aan Richard weten dat de Connector-themaboom is bijgewerkt (+vgc!). Voorlopig wordt de themaboom niet meer automatisch gesynchroniseerd bij de wekelijkse update wegens een hardnekkige bug. Aangezien de inhoud van de themaboom niet vaak verandert, moeten we nu dus Richard op de hoogte brengen wanneer we de themaboom wijzigen. Geef Richard ook aangepaste kubusdimensies mee en eventuele onderwerpen die niet aggregeerbaar zijn en niet op wijkniveau worden ingelezen. 
 
 Zorg ervoor dat je **ten laatste de vrijdag voor de OBMI publiceert**. 
 
