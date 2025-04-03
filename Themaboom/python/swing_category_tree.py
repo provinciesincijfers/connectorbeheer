@@ -2,7 +2,7 @@
 
 # Maak een overzicht van de themaboom van Swing met alle indicatoren
 #   Gecreëerd op 2024-05-27 door Geert Bonte
-#   Laatst gewijzigd op 2025-02-25
+#   Laatst gewijzigd op 2025-03-19
 
 # Voorbereiding:
 #   1. Check het configuratiebestand (swing_sites.xlsx) en zorg dat de rij die betrekking heeft op jouw Swing-site
