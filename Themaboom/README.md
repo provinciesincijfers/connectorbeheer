@@ -8,11 +8,13 @@ Als je al die verschillende Swing-implementaties bekijkt, zul je heel wat gelijk
 
 ## Python-scripts
 
-Er werden twee Python-scripts ontwikkeld met betrekking tot de themaboom. De scripts houden rekening met de verschillen tussen de verschillende Swing-omgevingen.
+Er werden twee Python-scripts ontwikkeld met betrekking tot de themaboom. De scripts houden rekening met de verschillen tussen de al die Swing-omgevingen.
 
 Een eerste script (`swing_category_tree.py`) reproduceert de volledige uitgeklapte themaboom, met een overzicht van alle thema’s, subthema’s en onderwerpen. Dit is handig om een volledig overzicht te hebben (én te doorzoeken) en om dit te delen met geïnteresseerde gebruikers.
 
 Het tweede script (`pinc_category_import.py`) biedt steden en gemeenten een mogelijkheid (maar zeker geen verplichting) om hun themaboom gelijk te zetten met PinC voor wat betreft de onderwerpen die gedeeld worden via de connector.
+
+Het eerste script is al af en kan al gebruikt worden. Voor het tweede script zijn wellicht nog aanpassingen nodig en moet er nog uitgebreid getest worden.
 
 ## `swing_category_tree.py`
 
@@ -24,6 +26,6 @@ Alle uitleg vind je onder [Uitgeklapte themaboom](Uitgeklapte_themaboom.md).
 
 ## `pinc_category_import.py`
 
-Een aantal centrumsteden hebben de wens geüit om hun eigen themaboom gelijk te zetten met de themaboom van PinC, althans voor wat betreft alle onderwerpen die via de connector vanuit PinC doorstromen naar de Swing-implementaties van de steden.
+Een aantal centrumsteden hebben de wens geuit om hun eigen themaboom gelijk te zetten met de themaboom van PinC, althans voor wat betreft alle onderwerpen die via de connector vanuit PinC doorstromen naar de Swing-implementaties van de steden.
 
 Dit Python-script biedt daarbij een grote hulp. Het script produceert een Excel-bestand met een gedeeltelijke themaboom, die de centrumsteden in hun eigen Swing-omgeving kunnen importeren. Het bestand bevat alle thema’s, subthema’s en onderwerpen die gedeeld worden via de connector, in de volgorde waarin ze opgenomen zijn in de externe themaboom van PinC.
