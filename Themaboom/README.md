@@ -29,3 +29,5 @@ Alle uitleg vind je onder [Uitgeklapte themaboom](Uitgeklapte_themaboom.md).
 Een aantal centrumsteden hebben de wens geuit om hun eigen themaboom gelijk te zetten met de themaboom van PinC, althans voor wat betreft alle onderwerpen die via de connector vanuit PinC doorstromen naar de Swing-implementaties van de steden.
 
 Dit Python-script biedt daarbij een grote hulp. Het script produceert een Excel-bestand met een gedeeltelijke themaboom, die de centrumsteden in hun eigen Swing-omgeving kunnen importeren. Het bestand bevat alle thema’s, subthema’s en onderwerpen die gedeeld worden via de connector, in de volgorde waarin ze opgenomen zijn in de externe themaboom van PinC.
+
+Meer info onder [Themaboom gelijkzetten met PinC](Themaboom_gelijkzetten_met_PinC.md).
