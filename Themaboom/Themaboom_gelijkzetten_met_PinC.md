@@ -2,7 +2,7 @@
 
 ## Inleiding
 
-Wil je als centrumstad je themaboom gelijkzetten met de themaboom van PinC, dan zul je in de nabije toekomst hiervan gebruik kunnen maken. Je hoeft dit script niet zelf te runnen: het script wordt op regelmatige basis gerund door de beheerders van PinC. Het script produceert een Excel-bestand, dat met de centrumsteden gedeeld kan worden via de connector. Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. Maar het bestand bevat alleen de onderwerpen die vanuit PinC naar de centrumsteden doorstromen via de connector.
+Wil je als centrumstad je themaboom gelijkzetten met de themaboom van PinC, dan zul je in de nabije toekomst hiervan gebruik kunnen maken. Je hoeft dit script niet zelf te runnen: het script wordt op regelmatige basis gerund door de beheerders van PinC. Het script produceert een Excel-bestand, dat met de centrumsteden gedeeld kan worden via GitHub. Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
 
 Let op: er zijn nog uitgebreidere testen nodig alvorens we dit kunnen gebruiken. Een eerste test heeft alvast uitgewezen dat het erg lang kan duren om een grote themaboom te importeren. We willen eerst weten of dit overal goed gaat.
 
@@ -12,7 +12,7 @@ Je kunt de limieten die van toepassing zijn op jouw Swing-omgeving controleren d
 
 ![About Studio](images/swing_studio_menu_about.png)
 
-Je krijgt dan een overzichtspagina te zien. Bij provincies.incijfers.be ziet die pagina er bijvoorbeeld als volgt uit (op 17 april 2025):
+Je krijgt dan een overzichtspagina te zien. Bij provincies.incijfers.be ziet die pagina er bijvoorbeeld als volgt uit (april 2025):
 
 ![About Studio](images/swing_studio_about.png)
 
@@ -20,16 +20,9 @@ Voor de themaboom is de limiet ‘maximum amount of category tree items’ van b
 
 ## Werking van het script
 
-Om het script te laten werken, moeten we eerst de volledige (externe + interne) themaboom van PinC exporteren. Dat gaat als volgt:
+Om het script te laten werken, moeten we eerst de volledige (externe + interne) themaboom van PinC exporteren. We krijgen dan een exportbestand genaamd `CategoryTree.xlsx`, dat we in dezelfde map plaatsen als het script.
 
-- log in bij Swing Studio
-- klik op **Category tree**
-- selecteer de root (`Thema's`) of de map `PRODUCTIE` om zowel de externe als de interne themaboom te exporteren
-- klik op `EXPORT`
-
-Er wordt nu een Excel-bestand gedownload met de naam `CategoryTree.xlsx`. Plaats dat bestand in dezelfde map als het script.
-
-Daarna kan het script gerund worden. Het resultaat is een nieuw Excel-bestand met de naam `CategoryTree_import_PinC.xlsx`. Dat bestand kan (in theorie) in de Swing-omgevingen van de centrumsteden geïmporteerd worden (zolang daarbij de limiet ‘maximum amount of category tree items’ niet overschreden dreigt te worden).
+Vervolgens wordt het script gerund. Het resultaat is een nieuw Excel-bestand met de naam `CategoryTree_import_PinC.xlsx`. Dat bestand kan (in theorie) in de Swing-omgevingen van de centrumsteden geïmporteerd worden (zolang daarbij de limiet ‘maximum amount of category tree items’ niet overschreden dreigt te worden).
 
 Om dit voor elkaar te krijgen gaat het script als volgt te werk:
 
@@ -50,6 +43,9 @@ Het is natuurlijk niet de bedoeling dat de (externe) themaboom van de centrumste
 > _De bestaande themaboom overschrijven met een nieuwe is overigens niet zomaar mogelijk: met een importbestand kunnen alleen maar nieuwe items toegevoegd worden en bestaande items aangepast worden, maar er kunnen met een import nooit bestaande items verwijderd of verplaatst worden._
 
 Daarom staan alle te importeren onderwerpen aanvankelijk onder een tijdelijke map, die je kunt hernoemen of verplaatsen zoals je wilt. Die tijdelijke map heet `import_PinC`.
+
+> _De **volgorde** van de records in het Excel-bestand is belangrijk! Dit bepaalt namelijk de volgorde waarin de items in de themaboom zullen verschijnen. Je mag het Excel-bestand openen en bekijken, maar beslist **niet hersorteren!**_
+
 
 Om het Excel-bestand `CategoryTree_import_PinC.xlsx` te importeren, ga je als volgt te werk:
 
@@ -102,3 +98,31 @@ Om een overbodige map te verwijderen, ga je als volgt te werk:
 Je krijgt nu nog een dialoogvenster met een waarschuwing te zien, want deze actie kan niet ongedaan gemaakt worden. Klik op de rode `DELETE`-knop om de map (inclusief alle inhoud) definitief te verwijderen.
 
 ![Delete](images/swing_studio_category_tree_delete.png)
+
+### Indeling van de themaboom
+
+#### Root en categorieën
+
+Een Swing-themaboom heeft een _root_ (hoofmap) met daaronder meerdere niveaus (submappen) van _categorieën_ (thema’s en subthema’s). De naam van de root is niet in elke Swing-implementatie gelijk. Bij PinC en bij sommige centrumsteden heet de root `Thema's`, bij andere gewoon `root`.
+
+#### provincies.incijfers.be (PinC)
+
+Bij PinC hebben we vervolgens een categorie genaamd `PRODUCTIE` en een categorie genaamd `ADMIN ONLY`. De categorie `PRODUCTIE` is nog verder onderverdeeld in `EXTERN` en `INTERN`. Alles wat onder `EXTERN` staat, is wat alle gebruikers te zien krijgen; wat onder `INTERN` staat, krijgen enkel ingelogde gebruikers te zien. De categorie `ADMIN ONLY` is alleen toegankelijk voor PinC-beheerders.
+
+#### Centrumsteden
+
+Die indeling verschilt van de indeling bij de centrumsteden, en bij de steden zijn er nog onderlinge verschillen. Sommige hebben onder de root twee mappen genaamd `Extern` en `Intern`, maar die mappen kunnen ook een andere naam hebben, en bij sommige steden is er enkel een externe en geen interne themaboom.
+
+#### Import
+
+Als je het Excel-bestand `CategoryTree_import_PinC.xlsx` importeert, wordt de categorie `import_PinC` toegevoegd onder je bestaande root. Je mag die map daar niet zomaar laten staan, want anders wordt dit zichtbaar voor gebruikers wanneer de databank opnieuw gepubliceerd wordt. Het is dus van belang de map te verplaatsen naar de plaats waar je ’m wilt hebben –  als een submap van je bestaande externe themaboom óf ter vervanging ervan. In ieder geval zul je de map ook een andere naam willen geven.
+
+#### Back-up
+
+Als je de import gebruikt ter vervanging van je oorspronkelijke externe themaboom, dan kun je overwegen om de oorspronkelijke externe themaboom niet direct te verwijderen, maar te behouden als back-up. Je kunt de betreffende map dan eerst hernoemen, bv. naar `Extern_backup`, en vervolgens onzichtbaar maken voor gebruikers.
+
+Dat doe je door in Studio met de rechtermuisknop op de map te klikken en `Edit` te kiezen in het contextmenu. Onder `Name` kun je de naam van de map aanpassen. Maak het vakje `Visible` leeg om de map onzichtbaar te maken voor gebruikers. Vink voor de zekerheid ook nog het vakje `Exclude from Search` aan om zeker te zijn dat de map niet in de zoekresultaten verschijnt.
+
+Klik tenslotte op de groene `SAVE`-knop onderaan om de instellingn te bewaren.
+
+![Edit category](images/swing_studio_category_tree_edit_2.png)
