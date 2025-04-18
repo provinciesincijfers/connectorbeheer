@@ -77,9 +77,11 @@ Je kunt nu de themaboom aanpassen en inrichten zoals je zelf wilt en de zopas ge
 
 Heb je in je huidige externe themaboom geen eigen onderwerpen, rapporten, presentaties en URL-links, maar heb je uitsluitend items die uit PinC komen? Dan kun je je eigen externe themaboom volledig vervangen door de geïmporteerde PinC-themaboom.
 
-Heb je echter niet alleen maar items staan die uit PinC komen, maar heb je ook nog eigen onderwerpen, rapporten, presentaties en URL-links? Dan wil je die natuurlijk behouden. Je kunt dan de geïmporteerde PinC-themaboom opnemen in een submap van je bestaande externe themaboom (en overbodige themaboom-items verwijderen).
+Heb je echter niet alleen maar items staan die uit PinC komen, maar heb je ook nog eigen onderwerpen, rapporten, presentaties en URL-links? Dan wil je die natuurlijk behouden. Je kunt dan de geïmporteerde PinC-themaboom opnemen als een submap van je bestaande externe themaboom (en overbodige themaboom-items verwijderen).
 
 Het spreekt vanzelf dat je hierbij de nodige voorzichtigheid aan de dag moet leggen. Een foutje is snel gemaakt, en je wilt natuurlijk niet dat je gebruikers hun vertrouwde thema’s en onderwerpen niet meer kunnen vinden.
+
+#### Een map verplaatsen
 
 Binnen Studio kun je in de themaboom mappen verplaatsen door ze te verslepen, maar we raden dit ten sterkste af omdat het op die manier al heel snel fout kan gaan. Als je een map wilt verplaatsen, dan ga je beter als volgt te werk:
 
@@ -88,7 +90,15 @@ Binnen Studio kun je in de themaboom mappen verplaatsen door ze te verslepen, ma
 - Klik vervolgens op een andere map (bijvoorbeeld de map `Extern`). Daardoor wordt de aangeklikte map geselecteerd.
 - Klik nu nogmaals met de rechtermuisknop en kies `Paste` in het contextmenu. Daardoor wordt de inhoud van het klemboord verplaatst naar de geselecteerde map. Concreet wordt de map `import PinC` daardoor een submap van `Extern`.
 
-Eenmaal de map verplaatst is, kun je de map hernoemen. Dat kan door de map te selecteren en vervolgens op functietoets `F2` te klikken. Je kunt de naam van de map nu wijzigen.
+#### De mapnaam `import_PinC` verbergen
+
+Je kunt de map `import_PinC` in zijn geheel verplaatsen zodat de map een submap wordt van je bestaande map `Extern`. Je kunt daarbij de naam van de map verbergen. Het gevolg is dan dat gebruikers de naam van de map (`import_PinC`) niet meer te zien zullen krijgen in de themaboom, maar wél de inhoud van de map (dus alle submappen onder `import_PinC`).
+
+Klik daartoe de map aan met de rechtermuisknop en kies `Edit` in het menu. Maak het vakje `Visible in title` leeg (en laat `Visible` aangevinkt). Als je wilt, kun je de naam van de map ook wijzigen (onder  `Name`). Klik op de groene `SAVE`-knop onderaan om de instellingen te bewaren.
+
+![Edit category](images/swing_studio_category_tree_edit_1.png)
+
+#### Een map verwijderen
 
 Om een overbodige map te verwijderen, ga je als volgt te werk:
 
@@ -103,7 +113,7 @@ Je krijgt nu nog een dialoogvenster met een waarschuwing te zien, want deze acti
 
 #### Root en categorieën
 
-Een Swing-themaboom heeft een _root_ (hoofmap) met daaronder meerdere niveaus (submappen) van _categorieën_ (thema’s en subthema’s). De naam van de root is niet in elke Swing-implementatie gelijk. Bij PinC en bij sommige centrumsteden heet de root `Thema's`, bij andere gewoon `root`.
+Een Swing-themaboom heeft een _root_ (hoofmap) met daaronder meerdere niveaus (submappen) van _categorieën_ (thema’s en subthema’s). De naam van de root is niet in elke Swing-omgeving gelijk. Bij PinC en bij sommige centrumsteden heet de root `Thema's`, bij andere gewoon `root`.
 
 #### provincies.incijfers.be (PinC)
 
