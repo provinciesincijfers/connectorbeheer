@@ -2,7 +2,7 @@
 
 ## Inleiding
 
-Wil je als centrumstad je themaboom gelijkzetten met de themaboom van PinC, dan zul je in de nabije toekomst hiervan gebruik kunnen maken. Je hoeft dit script niet zelf te runnen: het script wordt op regelmatige basis gerund door de beheerders van PinC. Het script produceert een Excel-bestand, dat met de centrumsteden gedeeld kan worden via GitHub. Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
+Wil je als centrumstad je themaboom gelijkzetten met de themaboom van PinC, dan zul je in de nabije toekomst hiervan gebruik kunnen maken. Je hoeft dit script niet zelf te runnen: het script zal op regelmatige basis gerund worden door de beheerders van PinC. Het script produceert een Excel-bestand, dat met de centrumsteden gedeeld kan worden via GitHub. Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
 
 Let op: er zijn nog uitgebreidere testen nodig alvorens we dit kunnen gebruiken. Een eerste test heeft alvast uitgewezen dat het erg lang kan duren om een grote themaboom te importeren. We willen eerst weten of dit overal goed gaat.
 
@@ -133,6 +133,6 @@ Als je de import gebruikt ter vervanging van je oorspronkelijke externe themaboo
 
 Dat doe je door in Studio met de rechtermuisknop op de map te klikken en `Edit` te kiezen in het contextmenu. Onder `Name` kun je de naam van de map aanpassen. Maak het vakje `Visible` leeg om de map onzichtbaar te maken voor gebruikers. Vink voor de zekerheid ook nog het vakje `Exclude from Search` aan om zeker te zijn dat de map niet in de zoekresultaten verschijnt.
 
-Klik tenslotte op de groene `SAVE`-knop onderaan om de instellingn te bewaren.
+Klik tenslotte op de groene `SAVE`-knop onderaan om de instellingen te bewaren.
 
 ![Edit category](images/swing_studio_category_tree_edit_2.png)
