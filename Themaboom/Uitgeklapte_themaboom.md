@@ -4,9 +4,9 @@
 
 Wil je een overzicht maken van de volledige themaboom, dan kun je daarvoor het Python-script [swing_category_tree.py](python/swing_category_tree.py) gebruiken. Het script maakt een HTML-document aan (dat je met je webbrowser kunt opslaan als PDF) met een volledig overzicht van alle thema’s, subthema’s en onderwerpen in de themaboom. Je kunt ervoor kiezen om zowel de externe als de interne themaboom te visualiseren (in aparte documenten). De externe themaboom is wat _alle_ gebruikers kunnen zien wanneer ze naar de databank surfen; de interne themaboom is alleen zichtbaar voor _ingelogde_ gebruikers.
 
-Vóór je het script kunt gebruiken, is er wel wat voorbereidend werk nodig. Het Python-script heeft immers geen rechtstreekse toegang tot Swing. Daarom moet je eerst enkele bestanden downloaden vanuit Swing Studio. Het script leest die bestanden en reconstrueert zo de themaboom.
+Vóór je het script kunt gebruiken, is er wel wat voorbereidend werk nodig. Het Python-script heeft immers geen rechtstreekse toegang tot Swing. Daarom moet je eerst enkele bestanden exporteren vanuit Swing Studio. Het script leest die bestanden en reconstrueert zo de themaboom.
 
-Het script heeft volgende Excel-bestanden nodig, die je met Studio kunt exporteren.
+Het script heeft volgende Excel-bestanden nodig, die je met Studio kunt exporteren en downloaden:
 
 - `CategoryTree.xlsx`
 - `Indicators.xlsx`
@@ -15,11 +15,11 @@ Het script heeft volgende Excel-bestanden nodig, die je met Studio kunt exporter
 
 Het resultaat is één of meer HTML-bestanden met de volledige uitgeklapte themaboom, met alle thema’s, subthema’s en onderwerpen als aanklikbare links die je meteen naar de juiste plaats in de databank brengen.
 
-Dat document biedt niet enkel een handig en volledig overzicht, je kunt het ook als zoekinstrument gebruiken. Met de zoekfunctie van je webbrowser (Ctrl+F) kun je zoeken naar subthema’s en onderwerpen. Je komt dan meteen op de juiste plaats(en) in de themaboom terecht. Eenzelfde onderwerp kan eventueel op meerdere plaatsen in de themaboom staan.
+Die documenten bieden niet enkel een handig en volledig overzicht, je kunt ze ook als zoekinstrument gebruiken. Met de zoekfunctie van je webbrowser (Ctrl+F) kun je zoeken naar subthema’s en onderwerpen. Je komt dan meteen op de juiste plaats(en) in de themaboom terecht. Let op: eenzelfde onderwerp kan eventueel op meerdere plaatsen in de themaboom staan.
 
 ## Bestanden exporteren uit Swing Studio
 
-Om bovenstaande bestanden te exporteren, ga je als volgt te werk. Log in bij Swing Studio, dat is de beheersomgeving van Swing.
+Om bovenstaande bestanden te exporteren, ga je als volgt te werk. Log in bij Swing Studio, dat is de beheersomgeving van Swing. Daar heb je uiteraard een beheerdersaccount voor nodig (niet iedereen kan zomaar inloggen).
 
 ![Swing login](images/swing_login.png)
 
@@ -54,9 +54,9 @@ Om de themaboom te exporteren naar een Excel-bestand voor het Python-script, ga 
 
 ![Studio: Category tree export](images/export_category_tree_1.png)
 
-Hier kun je al bepalen welk deel van de themaboom het script precies zal tonen: selecteer je de root, dan wordt de complete inhoud van de themaboom geëxporteerd (dus zowel de externe als de interne en eventueel nog andere themabomen). Als je uitsluitend in de externe themaboom geïnteresseerd bent, dan selecteer je de map met de externe themaboom (bij PinC: `EXTERN`). Wanneer je vervolgens op `EXPORT` klikt, zal in dat geval alleen de externe themaboom geëxporteerd worden.
+Hier kun je al bepalen welk deel van de themaboom het script precies zal tonen: selecteer je de root, dan wordt de complete inhoud van de themaboom geëxporteerd (dus zowel de externe als de interne en eventueel nog andere (sub)themabomen). Als je uitsluitend in de externe themaboom geïnteresseerd bent, dan selecteer je de map met de externe themaboom (bij PinC: `EXTERN`). Wanneer je vervolgens op `EXPORT` klikt, zal in dat geval alleen de externe themaboom geëxporteerd worden.
 
-Klik je op `EXPORT` in het menu, dan krijg je nog onderstaand dialoogvenster waarin je ervoor kunt kiezen om alles te exporteren of alleen de map die je geselecteerd hebt. Na bevestigen met een klik op de groene `EXPORT`-knop maakt Studio een Excel-bestand aan met de themaboom. Dat bestand wordt door je browser gedownload en in je downloadmap geplaatst. Het bestand krijgt de naam `CategoryTree.xlsx`. Let op: wanneer er in je downloadmap al een bestand met die naam bestaat, dan krijgt het nieuw gedownloade bestand een andere naam, bv. `CategoryTree (1).xlsx`.
+Klik je op `EXPORT` in het menu, dan krijg je nog onderstaand dialoogvenster waarin je ervoor kunt kiezen om alles te exporteren of alleen de map (‘category’) die je geselecteerd hebt. Na bevestigen met een klik op de groene `EXPORT`-knop maakt Studio een Excel-bestand aan met de themaboom. Dat bestand wordt door je browser gedownload en in je downloadmap geplaatst. Het bestand krijgt de naam `CategoryTree.xlsx`. Let op: wanneer er in je downloadmap al een bestand met die naam bestaat, dan krijgt het nieuw gedownloade bestand een andere naam, bv. `CategoryTree (1).xlsx`.
 
 ![Studio: Category tree export](images/export_category_tree_2.png)
 
@@ -70,7 +70,7 @@ Klik op de knop `FILTER AND SORT` om eventuele filters van een vorige sessie te 
 
 ![Studio: Indicators (PinC)](images/swing_studio_indicators.png)
 
-Om de lijst te exporteren, klik je op de knop `EXPORT METADATA`. Let op: klik _niet_ op `EXPORT DATA`, maar op `EXPORT METADATA`, anders wordt niet enkel de lijst van indicatoren geëxporteerd, maar alle data van alle onderwerpen! Dat is natuurlijk niet de bedoeling (en het zou ook erg lang duren, want je krijgt dan een heel groot bestand).
+Om de lijst te exporteren, klik je op de knop `EXPORT METADATA`. Let op: klik _niet_ op `EXPORT DATA`, maar op `EXPORT METADATA`, anders wordt niet enkel de lijst van indicatoren geëxporteerd, maar alle data van alle onderwerpen! Dat is natuurlijk niet de bedoeling (en het zou ook erg lang duren, want je krijgt dan natuurlijk een heel groot bestand).
 
 Klik je op `EXPORT METADATA` in het menu, dan krijg je nog onderstaand dialoogvenster te zien. Laat de geselecteerde opties aangevinkt staan. Na bevestigen met een klik op de groene `EXPORT`-knop maakt Studio een Excel-bestand aan met de lijst van onderwerpen. Dat bestand wordt door je browser gedownload en in je downloadmap geplaatst. Het bestand krijgt de naam `Indicators.xlsx`. Let op: wanneer er in je downloadmap al een bestand met die naam bestaat, dan krijgt het nieuw gedownloade bestand een andere naam, bv. `Indicators (1).xlsx`.
 
@@ -102,7 +102,7 @@ Jammer genoeg is het niet mogelijk om de lijst met presentaties te exporteren. O
 
 Daardoor heeft het Python-script geen toegang tot de naam van een presentatie. Bij presentaties in de themaboom zal het script daarom enkel de code van de presentatie kunnen weergeven. Het is wel een aanklikbare link die je naar de juiste presentatie in de databank zal brengen.
 
-(N.B.: bij gebrek aan een exportbestand gaat het script uit van de veronderstelling dat alle codes die niet verwijzen naar een onderwerp, een rapport of een URL-link, een presentatie is.)
+(N.B.: bij gebrek aan een exportbestand voor presentaties gaat het script uit van de veronderstelling dat elke code die niet verwijst naar een onderwerp, een rapport of een URL-link, een presentatie is.)
 
 ### URL-links
 
@@ -128,6 +128,8 @@ Het Python-script dat je nodig hebt, heet `swing_category_tree.py`. Het script k
 
 Het script leest de geëxporteerde Excel-bestanden en bouwt aan de hand daarvan één of meerdere HTML-pagina’s met een volledig overzicht van de uitgeklapte themaboom. Heb je enkel de externe themaboom geëxporteerd, dan is het resultaat één HTML-bestand; heb je zowel de externe als de interne themaboom geëxporteerd, dan zal dit resulteren in twee aparte HTML-bestanden.
 
+N.B.: als je de volledige themaboom geëxporteerd hebt (de root), dan krijg je ook nog een extra document met alle onderwerpen die *niet* in één van de subthemabomen zitten. Dat kan handig zijn om dat soort onderwerpen op te sporen. Misschien werden ze ooit aangemaakt maar hebben ze ten onrechte nooit een plaatsje in de themaboom gekregen? Of misschien werden ze om een of andere reden bewust uit de themaboom gehouden...
+
 ### swing_sites.xlsx
 
 Behalve de hierboven genoemde Excel-bestanden gebruikt het script nog een bijkomend Excel-bestand, dat met het script wordt meegeleverd. Dat bestand heet `swing_sites.xlsx`. Het zorgt ervoor dat het script niet alleen goed werkt voor PinC, maar ook voor de Swing-omgevingen van de steden en gemeenten.
@@ -140,7 +142,7 @@ Zo zie je in de kolom `root` soms `Thema's` staan, soms `root`. De volgende drie
 
 **Belangrijk:** om de themaboom voor jouw Swing-implementatie te maken, moet je **de rij voor jouw centrumstad naar boven verplaatsen**. Het script leest enkel de eerste rij van de tabel (onder de kolomtitels) en negeert al de rest. In het bestand dat met het script wordt meegeleverd, staat PinC op de eerste rij. Wil je bijvoorbeeld de themaboom voor Kortrijk verwerken, verplaats dan de rij voor Kortrijk naar boven, zodat het script de juiste gegevens leest.
 
-In de kolom `database_url` staat de basis-URL naar de databank. Wijzig dit niet, dit zou normaal gezien correct ingevuld moeten zijn voor alle centrumsteden. Alle aanklikbare links in het outputbestand zijn gebaseerd op deze basis-URL.
+In de kolom `database_url` staat de basis-URL naar de databank. Wijzig dit niet, dit zou normaal gezien correct ingevuld moeten zijn voor alle centrumsteden. Alle aanklikbare links in het outputbestand zullen gebaseerd zijn op deze basis-URL.
 
 Zie je dat er voor jouw stad nog niets ingevuld staat in de kolommen `root` en `cat_extern`, ga dan na wat de naam is van de root-map en van de map met de externe themaboom voor jouw Swing-omgeving, en vul dit aan in het Excel-bestand. Het zou sympathiek zijn als je het ons (PinC) ook laat weten. Heb je ook een interne themaboom, vul dan ook de kolom `cat_intern` in.
 
@@ -148,15 +150,17 @@ Tenslotte is er nog een kolom `show_description`. Wanneer hier een `x` staat, za
 
 ### HTML-bestand
 
-Tijdens de run verschijnen op het scherm alle onderwerpen die aan de beurt komen. Na afloop toont het script de naam van het gegenereerde HTML-bestand. Dat bestand vind je in de map waar het script staat. Je kunt het bestand openen met je webbrowser (sleep het bestand vanuit de Verkenner naar je webbrowser of gebruik in je browser de sneltoets Ctrl+O en navigeer naar het bestand om het te openen).
+Tijdens de run verschijnen op het scherm alle onderwerpen die aan de beurt komen. Na afloop toont het script de naam van het gegenereerde HTML-bestand. Dat bestand zul je na de run aantreffen in de map waar het script staat. Je kunt het bestand openen met je webbrowser (sleep het bestand vanuit de Verkenner naar je webbrowser of gebruik in je browser de sneltoets Ctrl+O en navigeer naar het bestand om het te openen – of misschien wordt het bestand automatisch in je browser geopend wanneer je erop dubbelklikt).
 
 Om alles zo goed mogelijk weer te geven, gebruikt het HTML-bestand hetzelfde lettertype als Swing. Swing gebruikt eigen lettertypen waar alle pictogrammen in zitten die in de themaboom worden gebruikt: de symbolen voor een plat onderwerp, een kubusonderwerp, een percentage, een ratio, een gemiddelde, etc. Die lettertypen zijn normaal gezien niet op jouw computer geïnstalleerd, en je hoeft ze ook niet te installeren. Ze worden meegeleverd in de map `fonts` en worden rechtstreeks door het HTML-bestand aangeroepen via CSS. (Er wordt ook een CSS-bestand meegeleverd: `swing_category_tree.css`.)
 
-Wanneer je het HTML-bestand bekijkt met je webbrowser, zie je de uitgeklapte themaboom. Alle thema’s, subthema’s, onderwerpen, rapporten etc. zijn aanklikbare links die je direct naar de Swing-databank van jouw Swing-implementatie brengen. Test even of dit werkt. Kom je terecht in de databank van Provincies in Cijfers of van een andere centrumstad? Dan moet je wellicht het bestand `swing_sites.xlsx` nog aanpassen (zie hoger).
+Verplaats het HTML-bestand niet naar een andere map, tenzij je het CSS-bestand en de lettertypen mee verplaatst, want anders zal de tekst niet correct weergegeven kunnen worden.
 
-Wanneer je deze uitgeklapte themaboom aan iemand anders wilt bezorgen, dan kun je best een PDF maken. In een PDF blijven alle aanklikbare links behouden en de lettertypen worden ingesloten, zodat de correcte pictogrammen weergegeven worden.
+Wanneer je het HTML-bestand bekijkt met je webbrowser, zie je de uitgeklapte themaboom. Alle thema’s, subthema’s, onderwerpen, rapporten etc. zijn aanklikbare links die je direct naar de Swing-databank van jouw Swing-implementatie brengen. Test even of dit werkt. Kom je terecht in de databank van Provincies in Cijfers of van een andere centrumstad? Dan moet je wellicht het bestand `swing_sites.xlsx` nog aanpassen (zie hoger). Daarna kun je het script opnieuw runnen.
 
-Stuur het HTML-bestand _niet_ door naar anderen: lettertype en CSS-opmaak zullen in dat geval ontbreken (tenzij je ook het CSS-bestand en de lettertypen mee stuurt, maar dat is nogal omslachtig – het is veel handiger om gewoon een PDF-bestand te maken).
+Wanneer je deze uitgeklapte themaboom aan iemand anders wilt bezorgen, dan kun je best een PDF maken. We leggen straks uit hoe je dat doet. In een PDF blijven alle aanklikbare links behouden en de lettertypen worden ingesloten, zodat de correcte pictogrammen weergegeven worden. Het PDF-bestand kun je probleemloos naar een andere map verplaatsen of doorsturen naar iemand anders.
+
+Stuur het HTML-bestand _niet_ door naar anderen: lettertype en CSS-opmaak zullen in dat geval ontbreken (tenzij je ook het CSS-bestand en de lettertypen mee stuurt, maar dat is wat omslachtig – het is veel handiger om gewoon een PDF-bestand te maken).
 
 ### Uitgedoofde en gearchiveerde items
 

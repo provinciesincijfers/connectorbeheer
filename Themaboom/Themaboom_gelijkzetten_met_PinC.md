@@ -1,14 +1,18 @@
-# Themaboom gelijkzetten met PinC [gepland]
+# Themaboom gelijkzetten met PinC
 
 ## Inleiding
 
-Wil je als centrumstad je themaboom gelijkzetten met de themaboom van PinC, dan zul je in de nabije toekomst hiervan gebruik kunnen maken. Je hoeft dit script niet zelf te runnen: het script wordt op regelmatige basis gerund door de beheerders van PinC. Het script produceert een Excel-bestand, dat met de centrumsteden gedeeld kan worden via GitHub. Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
+Voortaan heb je als centrumstad de mogelijkheid om je themaboom gelijk te zetten met de themaboom van PinC. Je hoeft dit script niet zelf te runnen: het script wordt op regelmatige basis gerund door de beheerders van PinC. Het script produceert een meerdere Excel-bestanden, die met de centrumsteden gedeeld kunnen worden via GitHub.
 
-Let op: er zijn nog uitgebreidere testen nodig alvorens we dit kunnen gebruiken. Een eerste test heeft alvast uitgewezen dat het erg lang kan duren om een grote themaboom te importeren. We willen eerst weten of dit overal goed gaat.
+Er wordt een groot Excel-bestand aangemaakt met de complete themaboom (d.w.z. alle onderwerpen die gedeeld worden via de connector). Daarnaast worden er een aantal kleinere Exce-bestanden aangemaakt: één voor elk hoofdthema (DEMOGRAFIE, ONDERWIJS, etc.). Zo heb je de keuze en kun je kiezen of je alles gelijk wilt zetten of enkel één of meerdere thema’s.
 
-Je moet er ook rekening mee houden dat elke Swing-implementatie zijn eigen limieten heeft voor wat betreft het aantal items in de themaboom. Als je een groot themaboom-bestand importeert, dan moet je eerst zeker zijn dat de limiet door de import niet bereikt of overschreden zal worden. In de Swing-omgeving van PinC kunnen we dit om die reden momenteel niet testen, want het themaboom-bestand dat we willen importeren, bevat veel meer items dan er in onze Swing-omgeving nog beschikbaar zijn.
+Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
 
-Je kunt de limieten die van toepassing zijn op jouw Swing-omgeving controleren door in te loggen in Swing Studio (de beheersomgeving van Swing) en vervolgens in het menu rechtsboven `Help` en vervolgens `About Studio` te kiezen.
+Let op: een grote themaboom importeren kan erg lang duren. Wil je dit eerst gewoon even uitproberen om te zien hoe het werkt, begin dan met één thema (met een veel kleiner Excel-bestand).
+
+Je moet er ook rekening mee houden dat elke Swing-implementatie zijn eigen limieten heeft voor wat betreft het aantal items in de themaboom. Als je een groot themaboom-bestand importeert, dan moet je eerst zeker zijn dat de limiet door de import niet bereikt of overschreden zal worden.
+
+Je kunt de limieten die van toepassing zijn op jouw Swing-omgeving controleren door in te loggen in Swing Studio en vervolgens in het menu rechtsboven `Help` en daarna `About Studio` te kiezen.
 
 ![About Studio](images/swing_studio_menu_about.png)
 
@@ -16,13 +20,20 @@ Je krijgt dan een overzichtspagina te zien. Bij provincies.incijfers.be ziet die
 
 ![About Studio](images/swing_studio_about.png)
 
-Voor de themaboom is de limiet ‘maximum amount of category tree items’ van belang.
+Voor de themaboom is de limiet ‘maximum amount of category tree items’ van belang. Hierbij moet onder ‘items’ niet alleen de onderwerpen verstaan worden, maar ook alle benodigde mappen en submappen (thema’s en subthema’s).
 
 ## Werking van het script
 
 Om het script te laten werken, moeten we eerst de volledige (externe + interne) themaboom van PinC exporteren. We krijgen dan een exportbestand genaamd `CategoryTree.xlsx`, dat we in dezelfde map plaatsen als het script.
 
 Vervolgens wordt het script gerund. Het resultaat is een nieuw Excel-bestand met de naam `CategoryTree_import_PinC.xlsx`. Dat bestand kan (in theorie) in de Swing-omgevingen van de centrumsteden geïmporteerd worden (zolang daarbij de limiet ‘maximum amount of category tree items’ niet overschreden dreigt te worden).
+
+Dat bestand bevat de volledige themaboom; daarnaast worden ook meerdere kleinere Excel-bestanden aangemaakt per hoofdthema, bv.:
+
+`CategoryTree_import_PinC_DEMOGRAFIE.xlsx`\
+`CategoryTree_import_PinC_ONDERWIJS.xlsx`\
+`CategoryTree_import_PinC_WERKEN_EN_ONDERNEMEN.xlsx`\
+...
 
 Om dit voor elkaar te krijgen gaat het script als volgt te werk:
 
@@ -32,7 +43,7 @@ Het script overloopt vervolgens alle items in de **externe themaboom** van PinC,
 
 Het resultaat is een subset van de externe themaboom van PinC, waarin alleen de connector-onderwerpen voorkomen en waarbij de volgorde van de externe themaboom van PinC behouden blijft.
 
-Om dit te kunnen importeren bij de centrumsteden, moeten we wel nog de indicatorcodes wijzigen: alle codes die via de uitgaande connector gaan, krijgen bij de centrumsteden immers het prefix `dna_`. Het script zal daarom overal die prefix toevoegen, zodat de codes overeenstemmen met de codes in de databank van de Swing-omgeving van de centrumsteden.
+Om dit te kunnen importeren bij de centrumsteden, moeten we wel nog de indicatorcodes wijzigen: alle codes die via de uitgaande connector gaan, krijgen bij de centrumsteden immers het prefix `dna_`. Het script zal daarom overal dat prefix toevoegen, zodat de codes overeenstemmen met de codes in de databank van de Swing-omgeving van de centrumsteden.
 
 Momenteel (april 2025) worden er meer dan 10.630 items uit de externe themaboom van PinC (voornamelijk onderwerpen, maar ook enkele rapporten) gedeeld via de connector.
 
@@ -40,14 +51,14 @@ Momenteel (april 2025) worden er meer dan 10.630 items uit de externe themaboom 
 
 Het is natuurlijk niet de bedoeling dat de (externe) themaboom van de centrumsteden zomaar wordt overschreven wanneer het bestand wordt geïmporteerd.
 
-> _De bestaande themaboom overschrijven met een nieuwe is overigens niet zomaar mogelijk: met een importbestand kunnen alleen maar nieuwe items toegevoegd worden en bestaande items aangepast worden, maar er kunnen met een import nooit bestaande items verwijderd of verplaatst worden._
+> _De bestaande themaboom overschrijven met een nieuwe is overigens niet zomaar mogelijk: met een importbestand kunnen alleen maar nieuwe items toegevoegd worden en bestaande items vervangen worden, maar er kunnen met een import nooit bestaande items verwijderd of verplaatst worden._
 
 Daarom staan alle te importeren onderwerpen aanvankelijk onder een tijdelijke map, die je kunt hernoemen of verplaatsen zoals je wilt. Die tijdelijke map heet `import_PinC`.
 
 > _De **volgorde** van de records in het Excel-bestand is belangrijk! Dit bepaalt namelijk de volgorde waarin de items in de themaboom zullen verschijnen. Je mag het Excel-bestand openen en bekijken, maar beslist **niet hersorteren!**_
 
 
-Om het Excel-bestand `CategoryTree_import_PinC.xlsx` te importeren, ga je als volgt te werk:
+Om het Excel-bestand `CategoryTree_import_PinC_.xlsx` te importeren, ga je als volgt te werk:
 
 - log in bij Swing Studio
 - klik op **Category tree**
@@ -55,11 +66,11 @@ Om het Excel-bestand `CategoryTree_import_PinC.xlsx` te importeren, ga je als vo
 - kies het bestand `CategoryTree_import_PinC.xlsx`
 - klik op de groene `IMPORT`-knop
 
-Het importeren van meer dan tienduizend themaboom-items kan erg lang duren. Blijf echter alert om te vermijden dat je automatisch uitgelogd wordt uit Studio terwijl het importproces nog bezig is. Na zowat 25 minuten kun je volgende boodschap op het scherm zien verschijnen:
+Het importeren van meer dan tienduizend themaboom-items kan erg lang duren. Na zowat 25 minuten kun je volgende boodschap op het scherm zien verschijnen:
 
 ![Time-out](images/swing_session_inactive.png)
 
-Klik op `CONTINUE` om te vermijden dat je uitgelogd wordt.
+Klik op `CONTINUE` om te vermijden dat je uitgelogd wordt. Heb je te lang gewacht en word je toch uitgelogd, dan is dat niet erg. Het import-proces blijft in de achtergrond lopen op de server.
 
 Bij een test in de bèta-omgeving van PinC duurde het zowat een half uur om een bestand met 3.000 items te importeren. Vermoedelijk zal het importeren van een bestand met 10.000 items dus tussen anderhalf en twee uur duren (waarbij je meermaals bovenstaande boodschap kunt zien).
 
@@ -83,7 +94,7 @@ Het spreekt vanzelf dat je hierbij de nodige voorzichtigheid aan de dag moet leg
 
 #### Een map verplaatsen
 
-Binnen Studio kun je in de themaboom mappen verplaatsen door ze te verslepen, maar we raden dit ten sterkste af omdat het op die manier al heel snel fout kan gaan. Als je een map wilt verplaatsen, dan ga je beter als volgt te werk:
+Binnen Studio kun je in de themaboom mappen verplaatsen door ze te verslepen, maar we raden dit af omdat het op die manier al heel snel fout kan gaan. Als je een map wilt verplaatsen, dan ga je beter als volgt te werk:
 
 - Klik op de map die je wilt verplaatsen (bijvoorbeeld de map `import PinC`). Daardoor wordt die map geselecteerd. Dat merk je doordat de achtergrond een andere kleur krijgt.
 - Klik nu nogmaals met de rechtermuisknop en kies `Cut` in het contextmenu. Daardoor wordt de geselecteerde map naar het klembord gekopieerd.
@@ -133,6 +144,6 @@ Als je de import gebruikt ter vervanging van je oorspronkelijke externe themaboo
 
 Dat doe je door in Studio met de rechtermuisknop op de map te klikken en `Edit` te kiezen in het contextmenu. Onder `Name` kun je de naam van de map aanpassen. Maak het vakje `Visible` leeg om de map onzichtbaar te maken voor gebruikers. Vink voor de zekerheid ook nog het vakje `Exclude from Search` aan om zeker te zijn dat de map niet in de zoekresultaten verschijnt.
 
-Klik tenslotte op de groene `SAVE`-knop onderaan om de instellingn te bewaren.
+Klik tenslotte op de groene `SAVE`-knop onderaan om de instellingen te bewaren.
 
 ![Edit category](images/swing_studio_category_tree_edit_2.png)
