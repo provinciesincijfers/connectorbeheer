@@ -4,6 +4,8 @@
 
 Voortaan heb je als centrumstad de mogelijkheid om je themaboom gelijk te zetten met de themaboom van PinC. Je hoeft dit script niet zelf te runnen: het script wordt op regelmatige basis gerund door de beheerders van PinC. Het script produceert een meerdere Excel-bestanden, die met de centrumsteden gedeeld kunnen worden via GitHub.
 
+Wil je als centrumstad je themaboom gelijkzetten met de themaboom van PinC, dan zul je in de nabije toekomst hiervan gebruik kunnen maken. Je hoeft dit script niet zelf te runnen: het script zal op regelmatige basis gerund worden door de beheerders van PinC. Het script produceert een Excel-bestand, dat met de centrumsteden gedeeld kan worden via GitHub. Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
+
 Er wordt een groot Excel-bestand aangemaakt met de complete themaboom (d.w.z. alle onderwerpen die gedeeld worden via de connector). Daarnaast worden er een aantal kleinere Exce-bestanden aangemaakt: één voor elk hoofdthema (DEMOGRAFIE, ONDERWIJS, etc.). Zo heb je de keuze en kun je kiezen of je alles gelijk wilt zetten of enkel één of meerdere thema’s.
 
 Wil je als centrumstad je themaboom gelijkzetten met PinC, dan kun je dat Excel-bestand importeren. Het bestand bevat een selectie van de externe themaboom van PinC, met alle thema’s, subthema’s en onderwerpen in dezelfde volgorde als op PinC. De selectie bevat alleen de onderwerpen die gedeeld worden via de connector.
